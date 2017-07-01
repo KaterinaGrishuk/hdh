@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css?family=Philosopher:400,400i");
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+body {
+  background-color: #e1e3e2;
+  font-family: 'Philosopher', sans-serif;
+  font-weight: 800;
+  font-size: 17px; }
+
+a {
+  text-decoration: none;
+  color: #000; }
+  a:hover {
+    text-decoration: none; }
+
+.main-logo {
+  float: left;
+  margin-top: 7px;
+  position: relative; }
+  .main-logo .top_logo {
+    display: inline-block;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+            background-size: cover; }
+    .main-logo .top_logo img {
+      width: 85px;
+        width-height: auto; }
+  .main-logo .site-name {
+    display: inline-block;
+    margin-left: 5px;
+    min-width: 355px;
+    position: relative; }
+    .main-logo .site-name h1 {
+      min-width: 355px;
+      margin: 0;
+      font-family: 'Philosopher', sans-serif;
+      font-weight: 600;
+      font-size: 32px;
+      position: absolute;
+      bottom: 6px; }
+    .main-logo .site-name h2 {
+      min-width: 355px;
+      margin: 0;
+      font-family: 'Philosopher', sans-serif;
+      font-weight: 600;
+      font-size: 16px;
+      position: absolute;
+      top: -5px; }
+
+.entrance {
+  text-align: right;
+  font-size: 17px;
+  margin: 30px 30px 0 0; }
+  .entrance i {
+    margin-right: 5px;
+    font-size: 21px; }
+
+.wrap_main_menu .main_menu {
+  background-color: rgba(135, 195, 160, 0.95);
+  max-width: 955px;
+  margin: -10px auto 0;
+  color: #000;
+  -webkit-border-radius: 10px;
+          border-radius: 10px;
+  font-size: 16px;
+  position: relative;
+  z-index: 1; }
+  .wrap_main_menu .main_menu ul {
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+    vertical-align: middle;
+    overflow: hidden;
+    height: auto; }
+    .wrap_main_menu .main_menu ul li {
+      display: inline-block;
+      list-style-type: none;
+      vertical-align: middle;
+      overflow: hidden;
+      height: auto;
+      padding: 30px 10px;
+      margin: 5px 0;
+      position: relative;
+      -webkit-transition: all .35s;
+      -o-transition: all .35s;
+      transition: all .35s; }
+      .wrap_main_menu .main_menu ul li:hover {
+        -webkit-border-radius: 5px;
+                border-radius: 5px;
+        -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+                box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+        -webkit-transform: scale(1.1);
+            -ms-transform: scale(1.1);
+                transform: scale(1.1); }
+      .wrap_main_menu .main_menu ul li:active {
+        background-color: rgba(135, 195, 160, 0.85);
+        -webkit-border-radius: 5px;
+                border-radius: 5px; }
+      .wrap_main_menu .main_menu ul li a {
+        color: #000;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 600;
+        text-transform: uppercase;
+        vertical-align: middle; }
+
+.dogs {
+  text-align: center;
+  margin: 20px auto 20px; }
+  .dogs .dog_wrap {
+    padding: 20px 15px 10px;
+    background-color: #f4f4f4;
+    -webkit-border-radius: 15px;
+            border-radius: 15px;
+    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    -webkit-transition: all .25s;
+    -o-transition: all .25s;
+    transition: all .25s;
+    margin-bottom: 25px;
+    position: relative; }
+    .dogs .dog_wrap:hover {
+      -webkit-box-shadow: 0 0 40px #60B88D;
+              box-shadow: 0 0 40px #60B88D; }
+    .dogs .dog_wrap .dog_img img {
+      width: 200px;
+      height: 133px; }
+    .dogs .dog_wrap .dog_data {
+      margin-top: 5px; }
+    .dogs .dog_wrap a {
+      display: none;
+      color: #fff;
+      width: 100%;
+      height: 100%;
+      background-color: #60B88D;
+      opacity: 0.8;
+      position: absolute;
+      top: 0;
+      left: 0;
+      line-height: 220px;
+      -webkit-border-radius: 15px;
+              border-radius: 15px; }
+      .dogs .dog_wrap a .fa {
+        font-size: 50px; }
+
+h3 {
+  font-family: 'Philosopher', sans-serif;
+  position: relative;
+  display: block;
+  margin: 0px 0px 0px;
+  padding: 15px 0px 35px;
+  font-weight: 800;
+  font-size: 24px;
+  text-align: center;
+  text-transform: uppercase;
+  overflow: hidden;
+  color: #000;
+  text-decoration: none;
+  -webkit-transition: all .25s;
+  -o-transition: all .25s;
+  transition: all .25s; }

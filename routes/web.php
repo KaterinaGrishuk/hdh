@@ -1,12 +1,9 @@
 <?php
 
 
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::get('pets', function() {
-    return 'Страница с питомцами';
-});
+Route::get('/', 'HomeController@index')->name('home');
+
+Route::get('pet-list', 'PetsController@petList')->name('pet-list');
 Route::get('pets/{name}', function ($name){
     return "Страница с $name";
 });
@@ -28,3 +25,6 @@ Route::get('news', function (){
 Route::get('news/{slag}', function ($slag){
     return "Страница c новостью - $slag";
 });
+Auth::routes();
+
+
