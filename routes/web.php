@@ -4,9 +4,9 @@
 Route::get('/', 'HomeController@index')->name('home');
 
 Route::get('pet-list', 'PetsController@petList')->name('pet-list');
-Route::get('pets/{name}', function ($name){
-    return "Страница с $name";
-});
+
+Route::get('pet-list/barhat', 'PetsController@viewPet')->name('barhat');
+
 Route::get('about', function (){
     return "Страница о нас";
 });

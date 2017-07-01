@@ -30,7 +30,7 @@
                     </div>
                     <div class="col-md-3">
                         <div class="dog_wrap">
-                            <a href="barhat.html"><i class="fa fa-search-plus" aria-hidden="true"></i></a>
+                            <a href="{{ route('barhat') }}"><i class="fa fa-search-plus" aria-hidden="true"></i></a>
                             <div class="dog_img"><img src="../img/3barhat.jpg" alt=""></div>
                             <div class="dog_data">
                                 <div class="dog_name">Бархат</div>
