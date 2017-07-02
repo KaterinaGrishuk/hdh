@@ -9,7 +9,8 @@ class PetsController extends Controller
     public function petList(){
         return view('pets.pet-list');
     }
+
     public function viewPet(){
-        return view('pets.barhat');
+        return view('pets.dog');
     }
 }

@@ -17,7 +17,7 @@
                 <div class="col-md-8">
                     <div class="main-logo">
                         <div class="top_logo">
-                            <a href="#"><img src="img/logo.png" alt="Дом собачьей надежды"></a>
+                            <a href="#"><img src="/img/logo.png" alt="Дом собачьей надежды"></a>
                         </div>
                         <div class="site-name">
                             <h1>Дом собачьей надежды</h1>
