@@ -7,7 +7,7 @@
                     <h3>Бархат ждёт своего хозяина</h3>
                 </div>
                 <div class="col-md-3">
-                    <div class="img_border"><img src="../img/3barhat.jpg" alt="Бархат"></div>
+                    <div class="img_border"><img src="/{{$avatar->path}}" alt="Бархат"></div>
                     <div class="share">
                         <p>Поделиться</p>
                         <div class="s_social">
@@ -21,15 +21,14 @@
 
                 <div class="col-md-7">
                     <div class="information">
-                        <div class="d_name"><span>Кличка:</span>Бархат</div>
-                        <div class="d_gender"><span>Пол:</span>Мужской</div>
-                        <div class="d_days"><span>Дни ожидания:</span>1243 дня</div>
-                        <div class="d_color"><span>Окрас:</span>Зонарно рыжий</div>
-                        <div class="d_age"><span>Возраст:</span>4 года</div>
-                        <div class="d_height"><span>Высота в холке:</span>48 см</div>
-                        <div class="d_wool"><span>Тип Шерсти:</span>Средней длины</div>
-                        <div class="d_age"><span>Характер:</span>Активный, добрый, любопытный</div>
-                        <div class="d_vet"><span>Вет-особенности:</span>Здоров, привит, обработан от паразитов, стерилизован</div>
+                        <div class="d_name"><span>Кличка:</span>{{$dog->name}}</div>
+                        <div class="d_gender"><span>Пол:</span>{{$dog->gender == 1 ? 'Кабель' : 'Сука'}}</div>
+                        <div class="d_color"><span>Окрас:</span>{{$dog->color}}</div>
+                        <div class="d_age"><span>Возраст:</span>{{$dog->age}} года</div>
+                        <div class="d_height"><span>Высота в холке:</span>{{$dog->height}} см</div>
+                        <div class="d_wool"><span>Тип Шерсти:</span>{{$dog->wool}}</div>
+                        <div class="d_age"><span>Характер:</span>{{$dog->character}}</div>
+                        <div class="d_vet"><span>Вет-особенности:</span>{{$dog->vet}}</div>
                     </div>
                 </div>
                 <div class="col-md-12">
