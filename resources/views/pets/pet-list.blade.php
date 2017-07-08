@@ -5,7 +5,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="col-md-12">
-                        <h3>Найди своего любимца</h3>
+                        <h3 style="background-image:none;">Найди своего любимца</h3>
                     </div>
                     <div class="col-md-3">
                         <div class="dog_wrap">

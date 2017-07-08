@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <a href="#"><h3>Они ищут хозяев</h3></a>
+                <a href="{{ route('pet-list') }}"><h3>Они ищут хозяев</h3></a>
             </div>
             <div class="col-md-12">
                 <div class="slide_pets">

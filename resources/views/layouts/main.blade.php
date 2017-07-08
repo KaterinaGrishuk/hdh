@@ -9,7 +9,7 @@
         <link rel="stylesheet" type="text/css" href="/libs/font-awesome/css/font-awesome.min.css">
     @show
 </head>
-<body>
+<body style="color: #222222;">
 <header>
     <div class="top_header">
         <div class="container">
@@ -17,7 +17,7 @@
                 <div class="col-md-8">
                     <div class="main-logo">
                         <div class="top_logo">
-                            <a href="#"><img src="/img/logo.png" alt="Дом собачьей надежды"></a>
+                            <a href="{{ route('home') }}"><img src="/img/logo.png" alt="Дом собачьей надежды"></a>
                         </div>
                         <div class="site-name">
                             <h1>Дом собачьей надежды</h1>
@@ -39,7 +39,7 @@
                 <div class="col-md-12">
                     <nav class="main_menu">
                         <ul>
-                            <li><a href="#">Главная</a></li>
+                            <li><a href="{{ route('home') }}">Главная</a></li>
                             <li><a href="{{ route('pet-list') }}">Питомцы</a></li>
                             <li><a href="#">Помощь приюту</a></li>
                             <li><a href="#">Финансовые отчёты</a></li>
@@ -87,8 +87,8 @@
             </div>
             <div class="col-md-12">
                 <ul>
-                    <li><a href="#">Главная</a></li>
-                    <li><a href="#">Питомцы</a></li>
+                    <li><a href="{{ route('home') }}">Главная</a></li>
+                    <li><a href="{{ route('pet-list') }}">Питомцы</a></li>
                     <li><a href="#">Помощь приюту</a></li>
                     <li><a href="#">Финансовые отчёты</a></li>
                     <li><a href="#">О нас</a></li>

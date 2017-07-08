@@ -7,6 +7,8 @@ Route::get('pet-list', 'PetsController@petList')->name('pet-list');
 
 Route::get('pet-list/barhat', 'PetsController@viewPet')->name('barhat');
 
+Route::get('db-insert', 'DBdogsController@insert')->name('db-insert');
+
 Route::get('about', function (){
     return "Страница о нас";
 });
