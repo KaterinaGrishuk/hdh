@@ -7,6 +7,11 @@ Route::get('pet-list', 'PetsController@petList')->name('pet-list');
 
 Route::get('dog/{pet}', 'PetsController@viewPet')->name('pet');
 
+Route::group(['prefix' => 'admin-dashboard'], function() {
+    Route::get('add-dog', 'AdminDogController@index');
+    Route::post('add-dog', 'AdminDogController@getData');
+});
+
 Route::get('about', function (){
     return "Страница о нас";
 });
