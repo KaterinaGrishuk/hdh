@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css?family=Philosopher:400,400i");
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box; }
+
+body {
+    background-color: #e1e3e2;
+    font-family: 'Philosopher', sans-serif;
+    font-weight: 400;
+    font-size: 17px; }
+
+a {
+    text-decoration: none;
+    color: #000; }
+a:hover {
+    text-decoration: none; }
+h3 {
+    font-family: 'Philosopher', sans-serif;
+    position: relative;
+    display: block;
+    margin: 20px 0 20px 0;
+    padding: 10px 100px;
+    font-weight: 800;
+    font-size: 22px;
+    text-transform: uppercase;
+    overflow: hidden;
+    color: #000;
+    text-align: center;
+    background-image: none;
+    background-repeat: no-repeat;
+    -webkit-background-size: contain;
+    background-size: contain;
+    background-position-x: 30px;
+    text-decoration: none;
+    -webkit-transition: all .25s;
+    -o-transition: all .25s;
+    transition: all .25s; }
+h4{
+    font-size: 18px;
+    font-weight: 600;
+    margin: 21px 0px;
+}
+h3:hover {
+    text-decoration: none;
+    background-image: none; }
+.v_content{
+    padding-right: 15px;
+    /*text-align: justify;*/
+}
+.v_content .v_conditions {
+    padding-left: 19px;
+}
+.v_content .v_conditions li{
+    list-style-type: none;
+}
+.v_content .v_conditions li i{
+    margin-right: 9px;
+    font-size: 15px;
+}
+.v_content p{
+    margin-left: 40px;
+}
+.form_wrap{
+    border: 1px #999 solid;
+    border-radius: 5px;
+    padding:0 10px 40px 8px;
+    margin-bottom:50px ;
+    /*padding-bottom: 30px;*/
+}
+.form_wrap input, textarea{
+    display: block;
+    width: 100%;
+    padding: 2px 10px;
+    /*margin-bottom: 15px;*/
+    /*font-size: 18px;*/
+    border: 1px #999 solid;
+    border-radius: 5px;
+}
+.form_wrap textarea{
+    height: 165px;
+}
+button{
+    float: right;
+    padding: 2px 10px;
+    font-size: 17px;
+    margin: 20px 0;
+    background-color: rgba(135, 195, 160, 0.95);
+    border-radius: 7px;
+    color: #333;
+}

@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css?family=Philosopher:400,400i");
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box; }
+
+body {
+    background-color: #e1e3e2;
+    font-family: 'Philosopher', sans-serif;
+    font-weight: 800;
+    font-size: 22px; }
+
+a {
+    text-decoration: none;
+    color: #000; }
+a:hover {
+    text-decoration: none; }
+h3 {
+    font-family: 'Philosopher', sans-serif;
+    position: relative;
+    display: block;
+    margin: 20px 0px 0px;
+    padding: 15px 0px 35px;
+    font-weight: 800;
+    font-size: 25px;
+    text-align: center;
+    text-transform: uppercase;
+    overflow: hidden;
+    color: #000;
+    text-decoration: none;
+    -webkit-transition: all .25s;
+    -o-transition: all .25s;
+    transition: all .25s;
+    background-image: none;}
+h3:hover {
+    background-image: none;
+}
+.form_wrap{
+    padding: 0px 150px;
+    margin-bottom: 60px;
+}
+.form_wrap span{
+    display: inline-block;
+    width: 36%;
+    float: left;
+    padding-top: 3px;
+}
+input, select, textarea{
+    width: 64%;
+    padding: 4px 20px;
+    margin-bottom: 15px;
+    font-size: 18px;
+    border: 1px #888a85 solid;
+    border-radius: 5px;
+    /*margin-left: -50px;*/
+
+}
+select{
+    width:auto;
+}
+textarea{
+    height: 250px;
+}
+input::-webkit-input-placeholder {
+    font-size: 18px;
+}
+textarea::-webkit-input-placeholder {
+    font-size: 14px;
+}
+input::-moz-placeholder{
+    font-size: 14px;
+
+}/* Firefox 19+ */
+textarea::-moz-placeholder{
+    font-size: 16px;
+}
+button{
+    float: right;
+    padding: 4px 30px;
+    font-size: 17px;
+}
+
+
+
+.form-style-2{
+    max-width: 500px;
+    padding: 20px 12px 10px 20px;
+    font: 13px Arial, Helvetica, sans-serif;
+}
+.form-style-2-heading{
+    font-weight: bold;
+    font-style: italic;
+    border-bottom: 2px solid #ddd;
+    margin-bottom: 20px;
+    font-size: 15px;
+    padding-bottom: 3px;
+}
+.form-style-2 label{
+    display: block;
+    margin: 0px 0px 15px 0px;
+}
+.form-style-2 label > span{
+    width: 100px;
+    font-weight: bold;
+    float: left;
+    padding-top: 8px;
+    padding-right: 5px;
+}

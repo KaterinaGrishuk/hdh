@@ -1,19 +1,32 @@
 @extends('layouts.main')
 @section('content')
+    <section class="add_pet">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h3>Добавить питомца</h3>
+                </div>
+                <div class="form_wrap">
+                    {{ Form::open() }}
+                    <span>Имя:</span>{{Form::text('name', null)}}<br>
+                    <span>Пол:</span>{{Form::select('gender', array('1' => 'Мужской', '2' => 'Женский'))}}<br>
+                    <span>Возраст:</span>{{Form::text('age', null)}}<br>
+                    <span>Высота в холке, см:</span>{{Form::text('height', null)}}<br>
+                    <span>Тип шерсти:</span>{{Form::select('wool', array('Короткая' => 'Короткая', 'Средней длины' => 'Средней длины', 'Длинная' => 'Длинная'))}}<br>
+                    <span>Окрас:</span>{{Form::text('color', null)}}<br>
+                    <span>Характер:</span>{{Form::text('character', null)}}<br>
+                    <span>Вет-особенности:</span>{{Form::text('vet', null)}}<br>
+                    <span>Дополнительная информация:</span>{{Form::textarea('information', null)}}<br>
 
-    <h2>Добавить питомца</h2>
-    {{ Form::open() }}
-        {{Form::text('name', null, ['placeholder' => 'Имя'])}}<br>
-        {{Form::text('gender', null, ['placeholder' => 'Пол'])}}<br>
-        {{Form::text('color', null, ['placeholder' => 'Окрас'])}}<br>
-        {{Form::text('age', null, ['placeholder' => 'Возраст'])}}<br>
-        {{Form::text('height', null, ['placeholder' => 'Высота в холке'])}}<br>
-        {{Form::text('wool', null, ['placeholder' => 'Тип шерсти'])}}<br>
-        {{Form::text('character', null, ['placeholder' => 'Характер'])}}<br>
-        {{Form::text('vet', null, ['placeholder' => 'Вет-особенности'])}}<br>
-        {{Form::textarea('information', null, ['placeholder' => 'Дополнительная информация'])}}<br>
+                    <button>Добавить</button><br>
+                    {{ Form::close() }}
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <button>Добавить</button><br>
-    {{ Form::close() }}
-
+@endsection
+@section('css')
+    @parent
+    <link rel="stylesheet" href="/css/add-dog.css">
 @endsection

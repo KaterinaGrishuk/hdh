@@ -16,7 +16,7 @@
                                 @endif
                                 <div class="dog_data">
                                     <div class="dog_name">{{ $dog->name }}</div>
-                                    <div class="dog_age">{{ $dog->age }} года</div>
+                                    <div class="dog_age">{{ $dog->age }} {{$controller->makeYears($dog->age)}} </div>
                                 </div>
                             </div>
                         </div>

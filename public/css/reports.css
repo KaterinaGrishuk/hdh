@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css?family=Philosopher:400,400i");
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box; }
+
+body {
+    background-color: #e1e3e2;
+    font-family: 'Philosopher', sans-serif;
+    font-weight: 400;
+    font-size: 17px; }
+
+a {
+    text-decoration: none;
+    color: #000; }
+a:hover {
+    text-decoration: none; }
+h3 {
+    font-family: 'Philosopher', sans-serif;
+    position: relative;
+    display: block;
+    margin: 20px 0 20px 0;
+    padding: 10px 100px;
+    font-weight: 800;
+    font-size: 18px;
+    /*text-transform: uppercase;*/
+    overflow: hidden;
+    color: #000;
+    text-align: left;
+    background-image: none;
+    background-repeat: no-repeat;
+    -webkit-background-size: contain;
+    background-size: contain;
+    background-position-x: 30px;
+    text-decoration: none;  }
+h3:hover {
+    text-decoration: none;
+    background-image: none; }
+h3 i{
+    margin-left:15px;
+}
+.empty_div{
+    height: 220px;
+}

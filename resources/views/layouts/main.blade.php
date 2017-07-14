@@ -7,6 +7,8 @@
         <link rel="stylesheet" type="text/css" href="/css/app.css">
         <link rel="stylesheet" type="text/css" href="/css/main.css">
         <link rel="stylesheet" type="text/css" href="/libs/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="/libs/fancybox/source/jquery.fancybox.css" media="screen" />
+        <link rel="shortcut icon" href="/img/logo-i2.png" type="image/png">
     @show
 </head>
 <body style="color: #222222;">
@@ -41,10 +43,10 @@
                         <ul>
                             <li><a href="{{ route('home') }}">Главная</a></li>
                             <li><a href="{{ route('pet-list') }}">Питомцы</a></li>
-                            <li><a href="#">Помощь приюту</a></li>
-                            <li><a href="#">Финансовые отчёты</a></li>
+                            <li><a href="{{ route('help') }}">Помощь приюту</a></li>
+                            <li><a href="{{ route('reports') }}">Финансовые отчёты</a></li>
                             <li><a href="#">О нас</a></li>
-                            <li><a href="#">Стать волонтёром</a></li>
+                            <li><a href="{{route('volunteer')}}">Стать волонтёром</a></li>
                             <li><a href="#">Контакты</a></li>
                         </ul>
                     </nav>
@@ -53,7 +55,20 @@
         </div>
     </div>
 </header>
-
+<div class="fix_menu">
+    <ul>
+        <li><a href="{{ route('home') }}">Главная</a></li>
+        <li><a href="{{ route('pet-list') }}">Питомцы</a></li>
+        <li><a href="{{ route('help') }}">Помощь приюту</a></li>
+        <li><a href="{{ route('reports') }}">Финансовые отчёты</a></li>
+        <li><a href="#">О нас</a></li>
+        <li><a href="{{route('volunteer')}}">Стать волонтёром</a></li>
+        <li><a href="#">Контакты</a></li>
+    </ul>
+    <div class="entrance">
+        <a href=""><i class="fa fa-user-o" aria-hidden="true"></i>Вход</a>
+    </div>
+</div>
 @yield('content')
 
 
@@ -89,10 +104,10 @@
                 <ul>
                     <li><a href="{{ route('home') }}">Главная</a></li>
                     <li><a href="{{ route('pet-list') }}">Питомцы</a></li>
-                    <li><a href="#">Помощь приюту</a></li>
-                    <li><a href="#">Финансовые отчёты</a></li>
+                    <li><a href="{{ route('help') }}">Помощь приюту</a></li>
+                    <li><a href="{{ route('reports') }}">Финансовые отчёты</a></li>
                     <li><a href="#">О нас</a></li>
-                    <li><a href="#">Стать волонтёром</a></li>
+                    <li><a href="{{route('volunteer')}}">Стать волонтёром</a></li>
                     <li><a href="#">Контакты</a></li>
                 </ul>
             </div>
@@ -102,6 +117,8 @@
     @section('footer.js')
         <script src='/js/app.js'></script>
         <script src="/libs/jquery.bxslider/jquery.bxslider.min.js"></script>
+        <script src="/libs/fancybox/lib/jquery.mousewheel.pack.js"></script>
+        <script src="/libs/fancybox/source/jquery.fancybox.pack.js"></script>
         <script src="/js/common.js"></script>
     @show
 </body>
