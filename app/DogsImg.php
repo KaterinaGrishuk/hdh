@@ -1,0 +1,10 @@
+<?php
+
+namespace App;
+
+use Illuminate\Database\Eloquent\Model;
+
+class DogsImg extends Model
+{
+    protected $table = 'dogs_img';
+}

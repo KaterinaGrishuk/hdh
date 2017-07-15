@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\DogsImg;
 use DB;
+use App\Dog;
 use Illuminate\Http\Request;
 
 class PetsController extends Controller
@@ -27,9 +29,9 @@ class PetsController extends Controller
     }
 
     public function viewPet($pet){
-        $pet = DB::table('dogs')->where('slug', $pet)->first();
-        $avatar = DB::table('dogs_img')->where('dog_id', $pet->id)->first();
-        $album = DB::table('dogs_img')->where('dog_id', $pet->id)->get();
+        $pet = Dog::where('slug', $pet)->first();
+        $avatar = DogsImg::where('dog_id', $pet->id)->first();
+        $album = DogsImg::where('dog_id', $pet->id)->get();
         //dd($album);
         return view('pets.dog', ['dog' => $pet, 'avatar'=> $avatar, 'album'=>$album, 'controller'=>$this]);
     }
