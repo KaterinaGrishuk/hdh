@@ -45,7 +45,7 @@
                             <li><a href="{{ route('pet-list') }}">Питомцы</a></li>
                             <li><a href="{{ route('help') }}">Помощь приюту</a></li>
                             <li><a href="{{ route('reports') }}">Финансовые отчёты</a></li>
-                            <li><a href="#">О нас</a></li>
+                            <li><a href="{{ route('about') }}">О нас</a></li>
                             <li><a href="{{route('volunteer')}}">Стать волонтёром</a></li>
                             <li><a href="#">Контакты</a></li>
                         </ul>
@@ -61,7 +61,7 @@
         <li><a href="{{ route('pet-list') }}">Питомцы</a></li>
         <li><a href="{{ route('help') }}">Помощь приюту</a></li>
         <li><a href="{{ route('reports') }}">Финансовые отчёты</a></li>
-        <li><a href="#">О нас</a></li>
+        <li><a href="{{ route('about') }}">О нас</a></li>
         <li><a href="{{route('volunteer')}}">Стать волонтёром</a></li>
         <li><a href="#">Контакты</a></li>
     </ul>
@@ -106,7 +106,7 @@
                     <li><a href="{{ route('pet-list') }}">Питомцы</a></li>
                     <li><a href="{{ route('help') }}">Помощь приюту</a></li>
                     <li><a href="{{ route('reports') }}">Финансовые отчёты</a></li>
-                    <li><a href="#">О нас</a></li>
+                    <li><a href="{{ route('about') }}">О нас</a></li>
                     <li><a href="{{route('volunteer')}}">Стать волонтёром</a></li>
                     <li><a href="#">Контакты</a></li>
                 </ul>

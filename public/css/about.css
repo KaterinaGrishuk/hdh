@@ -38,33 +38,22 @@ h3 {
 h3:hover {
     text-decoration: none;
     background-image: none; }
-h4{
-    font-size: 22px;
-    padding: 0 0 0 80px;
-    font-weight: 600;
-    margin: 21px 0px;
-    background-image: url(../img/icon/mark1.png);
-    background-repeat: no-repeat;
-    background-position-x: 40px;
-    -webkit-background-size: contain;
-    background-size: contain;
-}
-h5{
+.about h4{
+    margin-top: 20px;
+    font-weight:500;
     font-size: 19px;
-    padding: 0 0 0 30px;
+    /*margin-bottom: 30px;*/
 }
-.thanks{
-    text-align: center;
-    font-size: 19px;
-    font-weight: 600;
-    margin-top: 30px;
-    margin-bottom: 50px;
+.about h4 a{
+    font-weight:600;
 }
-.thanks i{
-    margin-left: 10px;
+.about h4 i{
     margin-right: 10px;
+    margin-left: 10px;
 }
-footer h4{
-    background-position-x: 0px;
-
+.about p{
+    font-size: 18px;
+}
+.about{
+    padding-bottom: 30px;
 }

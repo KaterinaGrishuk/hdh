@@ -13,14 +13,16 @@ Route::get('fin-reports', 'ReportsController@viewReports')->name('reports');
 
 Route::get('become-volunteer', 'VolunteerController@viewForm')->name('volunteer');
 
+Route::get('about', 'AboutController@viewAbout')->name('about');
+
+Route::get('feedback', 'AboutController@viewFeedback')->name('feedback');
+
+
 Route::group(['prefix' => 'admin-dashboard'], function() {
     Route::get('add-dog', 'AdminDogController@index');
     Route::post('add-dog', 'AdminDogController@getData');
 });
 
-Route::get('about', function (){
-    return "Страница о нас";
-});
 
 Route::get('contacts', function (){
     return "Страница с контактами";
