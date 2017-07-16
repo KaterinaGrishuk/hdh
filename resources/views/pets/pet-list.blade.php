@@ -12,7 +12,7 @@
                             <div class="dog_wrap">
                                 <a href="{{ route('pet', ['pet' => $dog->slug]) }}"><i class="fa fa-search-plus" aria-hidden="true"></i></a>
                                 @if($dog->path)
-                                    <div class="dog_img"><img src="/{{$dog->path}}" alt=""></div>
+                                    <div class="dog_img"><img src="{{$dog->path}}" alt=""></div>
                                 @endif
                                 <div class="dog_data">
                                     <div class="dog_name">{{ $dog->name }}</div>

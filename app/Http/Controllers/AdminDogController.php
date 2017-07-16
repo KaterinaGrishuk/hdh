@@ -19,19 +19,22 @@ class AdminDogController extends Controller
             'name' => 'required|min:2',
             'age' => 'required|numeric|between:1,20',
             'gender' => 'required|in:1,2',
-            'color' =>'required|min:5',
+            'color' =>'required|min:3',
             'height' =>'required|numeric|between:1,200',
-            'wool' =>'required|min:5',
+            'wool' =>'required|min:3',
             'character' =>'required|min:5',
             'vet' =>'required|min:5',
             'information' =>'required|min:5',
         ]);
+
+        $dog = Dog::create($request->except('_token'));
         if($request->hasFile('dog_img')){
-            $pathImg = $request->file('dog_img')->store('img', 'images');
-            $path =\Storage::disk('images')->url($pathImg);
+            foreach ($request->file('dog_img') as $photo) {
+                $pathImg = $photo->store('dogs/' . $dog->slug, 'images');
+                $path = \Storage::disk('images')->url($pathImg);
+                DogsImg::create(['path' => $path, 'dog_id' => $dog->id]);
+            }
         }
-        Dog::create($request->except('_token'));
-        DogsImg::create(['path'=>$path]);
         return redirect()->back();
     }
 

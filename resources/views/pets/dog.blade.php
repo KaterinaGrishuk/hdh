@@ -7,7 +7,9 @@
                     <h3>{{$dog->name}} ждёт своего хозяина</h3>
                 </div>
                 <div class="col-md-4">
-                    <div class="img_border"><img src="/{{$avatar->path}}" alt="Бархат"></div>
+                    @if($avatar)
+                        <div class="img_border"><img src="{{$avatar->path}}" alt="Бархат"></div>
+                    @endif
                     <div class="share">
                         <p>Поделиться</p>
                         <div class="s_social">
@@ -38,7 +40,7 @@
                         <div class="foto_wrap">
                             <ul>
                                 @foreach($album as $photo)
-                                    <li><a class="foto" rel="group" href="/{{$photo->path}}"><img src="/{{$photo->path}}" alt=""></a></li>
+                                    <li><a class="foto" rel="group" href="{{$photo->path}}"><img src="{{$photo->path}}" alt=""></a></li>
                                 @endforeach
                             </ul>
                         </div>

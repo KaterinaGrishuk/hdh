@@ -14,7 +14,7 @@
                     {{--</ul>--}}
                 {{--@endif--}}
                 <div class="form_wrap">
-                    {{ Form::open() }}
+                    {{ Form::open(['files' => true]) }}
                     <span>Имя:</span>{{Form::text('name', null)}}<br>
                     @if($errors->has('name'))
                         <span class="alert alert-danger">{{ $errors->first('name') }}</span><br>
@@ -51,7 +51,7 @@
                     @if($errors->has('information'))
                         <span class="alert alert-danger">{{ $errors->first('information') }}</span><br>
                     @endif
-                    <span>Добавить фото</span>{{Form::file('dog_img')}}<br>
+                    <span>Добавить фото</span>{{Form::file('dog_img[]', ['multiple' => true])}}<br>
                     <button>Добавить</button><br>
                     {{ Form::close() }}
                 </div>
