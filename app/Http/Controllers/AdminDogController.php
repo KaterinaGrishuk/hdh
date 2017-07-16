@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 
 class AdminDogController extends Controller
 {
+
     public function index(){
         return view('admin.dog.add-dog');
     }
@@ -25,9 +26,14 @@ class AdminDogController extends Controller
             'vet' =>'required|min:5',
             'information' =>'required|min:5',
         ]);
+        if($request->hasFile('dog_img')){
+            $pathImg = $request->file('dog_img')->store('img', 'images');
+            $path =\Storage::disk('images')->url($pathImg);
+        }
         Dog::create($request->except('_token'));
-
+        DogsImg::create(['path'=>$path]);
         return redirect()->back();
     }
 
 }
+
