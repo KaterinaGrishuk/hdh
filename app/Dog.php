@@ -13,4 +13,7 @@ class Dog extends Model
         $this->attributes['name'] = $name;
         $this->attributes['slug'] = str_slug($name);
     }
+    public function images(){
+        return $this->hasMany(DogsImg::class);
+    }
 }

@@ -7,8 +7,8 @@
                     <h3>{{$dog->name}} ждёт своего хозяина</h3>
                 </div>
                 <div class="col-md-4">
-                    @if($avatar)
-                        <div class="img_border"><img src="{{$avatar->path}}" alt="Бархат"></div>
+                    @if(!$dog->images->isEmpty())
+                        <div class="img_border"><img src="{{$dog->images->first()->path}}" alt="Бархат"></div>
                     @endif
                     <div class="share">
                         <p>Поделиться</p>
@@ -39,7 +39,7 @@
                         <h4>Альбом:</h4>
                         <div class="foto_wrap">
                             <ul>
-                                @foreach($album as $photo)
+                                @foreach($dog->images as $photo)
                                     <li><a class="foto" rel="group" href="{{$photo->path}}"><img src="{{$photo->path}}" alt=""></a></li>
                                 @endforeach
                             </ul>

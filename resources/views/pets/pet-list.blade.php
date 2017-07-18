@@ -11,8 +11,8 @@
                         <div class="col-md-3">
                             <div class="dog_wrap">
                                 <a href="{{ route('pet', ['pet' => $dog->slug]) }}"><i class="fa fa-search-plus" aria-hidden="true"></i></a>
-                                @if($dog->path)
-                                    <div class="dog_img"><img src="{{$dog->path}}" alt=""></div>
+                                @if(!$dog->images->isEmpty())
+                                    <div class="dog_img"><img src="{{$dog->images->first()->path}}" alt=""></div>
                                 @endif
                                 <div class="dog_data">
                                     <div class="dog_name">{{ $dog->name }}</div>
@@ -21,6 +21,11 @@
                             </div>
                         </div>
                     @endforeach
+                    <div class="row">
+                        <div class="col-md-12">
+                        {{ $dogs->render() }}
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

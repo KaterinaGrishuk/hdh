@@ -131,7 +131,7 @@ return [
     |
     */
 
-    'attributes'           => [
+    'attributes' => [
         'color' => 'окрас'
     ],
 
