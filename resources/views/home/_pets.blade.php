@@ -10,7 +10,7 @@
                         @foreach($dogs as $dog)
                             <a href="{{ route('pet', ['pet' => $dog->slug]) }}">
                                 <div class="slide">
-                                    <img src="/{{$dog->path}}" alt="">
+                                    <img src="{{$dog->path}}" alt="">
                                 </div>
                             </a>
                         @endforeach
