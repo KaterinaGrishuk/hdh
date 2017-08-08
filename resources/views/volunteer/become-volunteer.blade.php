@@ -34,14 +34,35 @@
                 </div>
                 <div class="col-md-5">
                     <div class="form_wrap">
-                        {{ Form::open() }}
+                        {{ Form::open(['files' => true]) }}
                         <span>Имя*</span>{{Form::text('name', null)}}
+                        @if($errors->has('name'))
+                            <div class="alert alert-danger">{{ $errors->first('name') }}</div>
+                        @endif
                         <span>Возраст*</span>{{Form::text('age', null)}}
+                        @if($errors->has('age'))
+                            <div class="alert alert-danger">{{ $errors->first('age') }}</div>
+                        @endif
                         <span>Город</span>{{Form::text('city', null)}}
-                        <span>Телефон*</span>{{Form::text('phone', null)}}
-                        <span>E-mail*</span>{{Form::text('mail', null)}}
+                        @if($errors->has('city'))
+                            <div class="alert alert-danger">{{ $errors->first('city') }}</div>
+                        @endif
+                        <span>Телефон*</span>{{Form::text('phone', null,['id'=>'phone'])}}
+                        @if($errors->has('phone'))
+                            <div class="alert alert-danger">{{ $errors->first('phone') }}</div>
+                        @endif
+                        <span>E-mail</span>{{Form::text('mail', null)}}
+                        @if($errors->has('mail'))
+                            <div class="alert alert-danger">{{ $errors->first('mail') }}</div>
+                        @endif
                         <span>Сфера деятельности (дежурства в приюте, помощь пиаром и пр.)*</span>{{Form::textarea('activities', null)}}
+                        @if($errors->has('activities'))
+                            <div class="alert alert-danger">{{ $errors->first('activities') }}</div>
+                        @endif
                         <span>Немного о себе</span>{{Form::textarea('about', null)}}
+                        @if($errors->has('about'))
+                            <div class="alert alert-danger">{{ $errors->first('about') }}</div>
+                        @endif
 
                         <button>Отправить</button><br>
                         {{ Form::close() }}

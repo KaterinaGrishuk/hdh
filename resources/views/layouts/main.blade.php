@@ -119,6 +119,7 @@
         <script src="/libs/jquery.bxslider/jquery.bxslider.min.js"></script>
         <script src="/libs/fancybox/lib/jquery.mousewheel.pack.js"></script>
         <script src="/libs/fancybox/source/jquery.fancybox.pack.js"></script>
+        <script src="/js/jquery.maskedinput.js"></script>
         <script src="/js/common.js"></script>
     @show
 </body>

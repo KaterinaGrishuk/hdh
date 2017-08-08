@@ -12,6 +12,7 @@ Route::get('help', 'HelpController@viewHelp')->name('help');
 Route::get('fin-reports', 'ReportsController@viewReports')->name('reports');
 
 Route::get('become-volunteer', 'VolunteerController@viewForm')->name('volunteer');
+Route::post('become-volunteer', 'VolunteerController@getData');
 
 Route::get('about', 'AboutController@viewAbout')->name('about');
 
