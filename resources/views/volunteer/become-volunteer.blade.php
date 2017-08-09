@@ -32,7 +32,13 @@
                         <h4>Звоните, пишите, приезжайте! Мы и наши собаки ждут вас!</h4>
                     </div>
                 </div>
+
                 <div class="col-md-5">
+                    @if(session('status'))
+                        <div class="alert alert-success">
+                            {{ session('status') }}
+                        </div>
+                    @else
                     <div class="form_wrap">
                         {{ Form::open(['files' => true]) }}
                         <span>Имя*</span>{{Form::text('name', null)}}
@@ -68,6 +74,7 @@
                         {{ Form::close() }}
                     </div>
                 </div>
+                @endif
             </div>
         </div>
     </section>

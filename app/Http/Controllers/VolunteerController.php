@@ -29,9 +29,9 @@ class VolunteerController extends Controller
 //            $message->from('lol@mail.ru');
 //            $message->to('palletsbel@gmail.com')->subject('LOL');
 //        });
-            Mail::to('lol@mail.ru')->send(new TestMail($data));
-        return redirect()->back();
-
-//        dd($data);
+            $sendMail = Mail::to('lol@mail.ru')->send(new TestMail($data));
+//        if($sendMail){
+            return redirect()->back()->with(['status'=>'Анкета успешно отправлена.']);
+//        }
     }
 }

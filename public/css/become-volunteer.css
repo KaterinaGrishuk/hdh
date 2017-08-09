@@ -94,3 +94,9 @@ button{
     padding: 3px 10px;
     font-size: 15px;
 }
+div.alert.alert-success{
+    font-size: 18px;
+    text-align: center;
+    padding:7px;
+    border: 1px #2ab27b solid;
+}
