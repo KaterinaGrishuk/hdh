@@ -16,17 +16,13 @@ Route::post('become-volunteer', 'VolunteerController@getData');
 
 Route::get('about', 'AboutController@viewAbout')->name('about');
 
-Route::get('feedback', 'AboutController@viewFeedback')->name('feedback');
+Route::get('contacts', 'ContactsController@viewContacts')->name('contacts');
+Route::post('contacts', 'ContactsController@getData');
 
 
 Route::group(['prefix' => 'admin-dashboard'], function() {
     Route::get('add-dog', 'AdminDogController@index');
     Route::post('add-dog', 'AdminDogController@getData');
-});
-
-
-Route::get('contacts', function (){
-    return "Страница с контактами";
 });
 
 Route::get('news', function (){

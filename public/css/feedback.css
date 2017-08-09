@@ -84,3 +84,16 @@ button{
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 
 }
+div.alert.alert-danger{
+    font-size: 16px;
+    padding: 4px 12px;
+    margin-top: 3px;
+    margin-bottom: 1px;
+}
+div.alert.alert-success{
+    text-align: center;
+    font-size: 19px;
+    padding: 13px 0px;
+    border: 1px #2ab27b solid;
+
+}

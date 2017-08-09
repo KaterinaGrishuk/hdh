@@ -9,7 +9,4 @@ class AboutController extends Controller
     public function viewAbout(){
         return view('about.about');
     }
-    public function viewFeedback(){
-        return view('about.feedback');
-    }
 }
