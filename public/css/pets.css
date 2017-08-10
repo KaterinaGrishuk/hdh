@@ -71,3 +71,18 @@ h3 {
   -webkit-transition: all .25s;
   -o-transition: all .25s;
   transition: all .25s; }
+
+.pagination .active span{
+  background-color: #888a85;
+  border-color: darkgray;
+}
+.pagination .active span:hover{
+  background-color: #888a85;
+  border-color: #888a85;
+}
+.pagination li a{
+  color: #888a85;
+}
+.pagination li a:hover{
+  color: #888a85;
+}

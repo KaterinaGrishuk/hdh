@@ -60,13 +60,16 @@
                 <div class="col-md-12">
                     <nav class="main_menu">
                         <ul>
-                            <li><a href="{{ route('home') }}">Главная</a></li>
+                            <li style="margin-left: 10px;"><a href="{{ route('home') }}">Главная</a></li>
                             <li><a href="{{ route('pet-list') }}">Питомцы</a></li>
                             <li><a href="{{ route('help') }}">Помощь приюту</a></li>
                             <li><a href="{{ route('reports') }}">Финансовые отчёты</a></li>
                             <li><a href="{{ route('about') }}">О нас</a></li>
                             <li><a href="{{route('volunteer')}}">Стать волонтёром</a></li>
-                            <li><a href="{{route('contacts')}}">Контакты</a></li>
+                            @if(Auth::user())
+                            <li><a style="color: #843534;" href="{{route('timetable')}}">График</a></li>
+                            @endif
+                            <li style="margin-right: 10px;"><a href="{{route('contacts')}}">Контакты</a></li>
                         </ul>
                     </nav>
                 </div>
