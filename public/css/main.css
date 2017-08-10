@@ -184,6 +184,24 @@ a {
   margin-right: 5px;
   font-size: 21px;
 }
+.dropdown-menu {
+  position: absolute;
+  left: 255px;
+  z-index: 1000;
+  display: none;
+  min-width: 118px;
+  padding: 5px 0;
+  margin: 2px 0 0;
+  list-style: none;
+  font-size: 14px;
+  text-align: center;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0,0,0,.15);
+  border-radius: 4px;
+  box-shadow: 0 6px 12px rgba(0,0,0,.175);
+  background-clip: padding-box;
+}
 .slider_wrap {
   z-index: 2 !important;
   margin-top: -46px !important; }

@@ -19,6 +19,10 @@ Route::get('about', 'AboutController@viewAbout')->name('about');
 Route::get('contacts', 'ContactsController@viewContacts')->name('contacts');
 Route::post('contacts', 'ContactsController@getData');
 
+Route::get('login', 'Auth\LoginController@showLoginForm');
+Route::post('login', 'Auth\LoginController@login');
+Route::post('logout', 'Auth\LoginController@logout');
+
 
 Route::group(['prefix' => 'admin-dashboard'], function() {
     Route::get('add-dog', 'AdminDogController@index');

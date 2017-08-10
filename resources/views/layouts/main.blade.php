@@ -29,7 +29,26 @@
                 </div>
                 <div class="col-md-4">
                     <div class="entrance">
-                        <a href=""><i class="fa fa-user-o" aria-hidden="true"></i>Вход / Регистрация</a>
+                        @if(Auth::guest())
+                            <a href="{{route('login')}}"><i class="fa fa-user-o" aria-hidden="true"></i>Вход / Регистрация</a>
+                        @else
+                            <div class="auth_user">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                <i class="fa fa-user-o" aria-hidden="true"></i>{{ Auth::user()->name }} <span class="caret"></span>
+                            </a>
+
+                            <div class="dropdown-menu" role="menu">
+                                <a href="{{ route('logout') }}"
+                                   onclick="event.preventDefault();
+                                   document.getElementById('logout-form').submit();"> Выйти
+                                </a>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                    {{ csrf_field() }}
+                                </form>
+                            </div>
+                            </div>
+
+                        @endif
                     </div>
                 </div>
             </div>
@@ -66,7 +85,13 @@
         <li><a href="{{route('contacts')}}">Контакты</a></li>
     </ul>
     <div class="entrance">
-        <a href=""><i class="fa fa-user-o" aria-hidden="true"></i>Вход</a>
+        @if(Auth::guest())
+            <a href=""><i class="fa fa-user-o" aria-hidden="true"></i>Вход</a>
+        @else
+            {{--<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">--}}
+                <i class="fa fa-user-o" aria-hidden="true"></i>{{ Auth::user()->name }}</span>
+            {{--</a>--}}
+        @endif
     </div>
 </div>
 @yield('content')
