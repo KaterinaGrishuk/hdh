@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css?family=Philosopher:400,400i");
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box; }
+
+body {
+    background-color: #e1e3e2;
+    font-family: 'Philosopher', sans-serif;
+    font-weight: 400;
+    font-size: 17px; }
+
+a {
+    text-decoration: none;
+    color: #000; }
+a:hover {
+    text-decoration: none; }
+h3 {
+    font-family: 'Philosopher', sans-serif;
+    position: relative;
+    display: block;
+    margin: 0;
+    padding: 20px 0 25px;
+    font-weight: 800;
+    font-size: 24px;
+    text-align: center;
+    text-transform: uppercase;
+    overflow: hidden;
+    color: #000;
+    text-decoration: none;
+    -webkit-transition: all .25s;
+    -o-transition: all .25s;
+    transition: all .25s;
+    background-image: none;}
+h3:hover {
+    background-image: none;
+}
+.adminPage{
+    padding-bottom: 40px;
+}
+tbody{
+    background-color: #f3f3f3
+}
+.table {
+    width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    vertical-align: middle;
+}
+.addDogBtn{
+    text-align: center;
+    margin-top: -5px;
+    margin-bottom: 20px;
+}
+.btn{
+    font-size: 16px;
+}

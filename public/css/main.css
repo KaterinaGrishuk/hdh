@@ -15,6 +15,12 @@ a {
   a:hover {
     text-decoration: none; }
 
+.alert.alert-success{
+  text-align: center;
+  font-size: 18px;
+  padding: 10px 0;
+  font-weight: 600;
+}
 .main-logo {
   float: left;
   margin-top: 7px;
@@ -194,6 +200,7 @@ a {
 .dropdown-menu {
   position: absolute;
   left: 255px;
+  top: 54px;
   z-index: 1000;
   display: none;
   min-width: 118px;

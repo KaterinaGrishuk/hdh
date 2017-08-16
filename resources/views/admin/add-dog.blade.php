@@ -23,7 +23,7 @@
                     @if($errors->has('gender'))
                         <span class="alert alert-danger">{{ $errors->first('gender') }}</span><br>
                     @endif
-                    <span>Возраст:</span>{{Form::text('age', null)}}<br>
+                    <span>Возраст, лет:</span>{{Form::text('age', null)}}<br>
                     @if($errors->has('age'))
                         <span class="alert alert-danger">{{ $errors->first('age') }}</span><br>
                     @endif

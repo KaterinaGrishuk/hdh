@@ -10,7 +10,8 @@ class HomeController extends Controller
     public function index()
     {
         $dogs = Dog::with('images')->limit(15)->get();
+        $user = \Auth::user();
 
-        return view('home.index', ['dogs' => $dogs]);
+        return view('home.index', ['dogs' => $dogs, 'user'=>$user]);
     }
 }

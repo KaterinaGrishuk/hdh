@@ -33,19 +33,24 @@
                             <a href="{{route('login')}}"><i class="fa fa-user-o" aria-hidden="true"></i>Вход / Регистрация</a>
                         @else
                             <div class="auth_user">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                <i class="fa fa-user-o" aria-hidden="true"></i>{{ Auth::user()->name }} <span class="caret"></span>
-                            </a>
-
-                            <div class="dropdown-menu" role="menu">
-                                <a href="{{ route('logout') }}"
-                                   onclick="event.preventDefault();
-                                   document.getElementById('logout-form').submit();"> Выйти
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                    <i class="fa fa-user-o" aria-hidden="true"></i>{{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
-                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                    {{ csrf_field() }}
-                                </form>
-                            </div>
+
+                                <div class="dropdown-menu" role="menu">
+                                    <a href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                       document.getElementById('logout-form').submit();"> Выйти
+                                    </a>
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        {{ csrf_field() }}
+                                    </form>
+                                </div>
+                                @if(Auth::user()->can('showAdminPage',\App\User::class))
+                                <div class="adminPageTop">
+                                    <a style="color: #843534;: 10px" href="{{route('pageAdmin')}}">Страница администратора</a>
+                                </div>
+                                @endif
                             </div>
 
                         @endif

@@ -27,8 +27,12 @@ Route::post('logout', 'Auth\LoginController@logout');
 
 
 Route::group(['prefix' => 'admin-dashboard'], function() {
-    Route::get('add-dog', 'AdminDogController@index');
-    Route::post('add-dog', 'AdminDogController@getData');
+    Route::get('/', 'AdminDogController@showAdminPage')->name('pageAdmin');
+    Route::delete('/', 'AdminDogController@deleteDog');
+    Route::get('add-dog', 'AdminDogController@showAddDog')->name('addDog');
+    Route::post('add-dog', 'AdminDogController@addDog');
+    Route::get('edit-dog/{id}', 'AdminDogController@showEditDog')->name('editDog');
+    Route::post('edit-dog/{id}', 'AdminDogController@editDog');
 });
 
 Route::get('news', function (){
