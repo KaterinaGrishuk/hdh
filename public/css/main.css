@@ -448,17 +448,10 @@ color: #000;
       -o-transition: all .35s;
       transition: all .35s; }
 
-.news {
+.map {
   padding: 15px 0 30px; }
-  .news .news_block {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    height: 300px;
-    border: 1px #000 solid;
-    -webkit-border-radius: 10px;
-            border-radius: 10px; }
+  .map .map_block {
+    text-align: center; }
 
 footer {
   padding: 20px 0 10px;

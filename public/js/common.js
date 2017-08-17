@@ -80,4 +80,7 @@ $(document).ready(function() {
 
         $("#phone").mask("+375 (99) 999-99-99");
 
+        VK.Widgets.Group("vk_groups", {mode: 3, width:300, no_cover:1, wide: 1, height: "230"}, 75865542);
+
+
 });

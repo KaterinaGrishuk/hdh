@@ -112,7 +112,7 @@
             </div>
             <div class="col-md-12">
                 <div class="r_more">
-                    <a href="">Подробнее <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                    <a href="{{route('help')}}">Подробнее <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
                 </div>
             </div>
             {{--<div class="popup"></div>--}}
