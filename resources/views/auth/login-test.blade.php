@@ -42,7 +42,7 @@
                         <button type="submit" class="btn" style="font-size: 16px;">
                             Войти
                         </button>
-                        <button type="button" class="btn" style="font-size: 16px;">
+                        <button id="js-register-btn" type="button" class="btn" style="font-size: 16px;">
                             <a href="{{ route('register') }}">Регистрация</a>
                         </button>
                         <a class="btn btn-link" style="color: #5CA375; font-size: 16px;" href="{{ route('password.request') }}">
@@ -55,10 +55,20 @@
         </div>
     </div>
     </div>
-
 @endsection
 @section('css')
     @parent
 
     <link rel="stylesheet" href="/css/login.css">
+@endsection
+
+@section('footer.js')
+    @parent
+    <script>
+        $('#js-register-btn').on('click', function(){
+            var url = $(this).find('a').attr('href');
+
+            location.assign(url);
+        });
+    </script>
 @endsection
