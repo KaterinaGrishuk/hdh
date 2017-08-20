@@ -26,7 +26,7 @@ Route::post('login', 'Auth\LoginController@login');
 Route::post('logout', 'Auth\LoginController@logout');
 
 
-Route::group(['prefix' => 'admin-dashboard'], function() {
+Route::group(['prefix' => 'admin-dashboard', 'middleware'=> ['auth', 'admin']], function() {
     Route::get('/', 'AdminDogController@showAdminPage')->name('pageAdmin');
     Route::delete('/', 'AdminDogController@deleteDog');
     Route::get('add-dog', 'AdminDogController@showAddDog')->name('addDog');
