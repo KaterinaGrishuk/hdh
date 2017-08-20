@@ -7,6 +7,12 @@
                     <div class="col-md-12">
                         <h3 style="background-image:none;">Найди своего любимца</h3>
                     </div>
+                    <h4>Фильтр</h4>
+                    <div class="drop-filter">
+                        {{Form::open(['method' => 'get'])}}
+                            {{Form::select('gender', [0 => '--Выберите--', 1 => "Мужской", 2 => "Женский"], null, ['id' => 'js-gender-filter'])}}
+                        {{Form::close()}}
+                    </div>
                     @foreach($dogs as $dog)
                         <div class="col-md-3">
                             <div class="dog_wrap">
@@ -35,4 +41,16 @@
 @section('css')
     @parent
     <link rel="stylesheet" href="/css/pets.css">
+@endsection
+@section('footer.js')
+    @parent
+    <script>
+        $('#js-gender-filter').on('change', function ( e ) {
+            var val = $(this).val();
+            if(0 == val){
+                return;
+            }
+            $(this).parent().submit();
+        });
+    </script>
 @endsection

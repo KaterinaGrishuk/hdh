@@ -11,8 +11,13 @@ class PetsController extends Controller
 {
     public function petList(){
 
-        $dogs = Dog::with('images')->paginate(12);
+        $dogs = Dog::with('images');
 
+        if($gender = \Request::get('gender')){
+            $dogs=$dogs->where('gender', $gender);
+        }
+
+        $dogs=$dogs->paginate(12);
         return view('pets.pet-list', ['dogs' => $dogs, 'controller'=>$this]);
     }
 

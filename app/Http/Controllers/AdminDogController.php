@@ -83,10 +83,13 @@ class AdminDogController extends Controller
     public function deleteDog(Request $request){
         $dogId = $request->id;
         $dog = Dog::find($dogId);
-        if($dog->images()->delete() && $dog->delete()){
-            return redirect()->route('pageAdmin')->with(['status'=>'Страница успешно удалена']);
+        $msg = 'Не удалось удалить страницу';
+
+        if($dog->images()->delete() || $dog->delete()){
+            $msg = 'Страница успешно удалена';
         }
 
+        return redirect()->route('pageAdmin')->with(['status'=>$msg]);
     }
 }
 
