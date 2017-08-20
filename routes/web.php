@@ -33,6 +33,7 @@ Route::group(['prefix' => 'admin-dashboard', 'middleware'=> ['auth', 'admin']], 
     Route::post('add-dog', 'AdminDogController@addDog');
     Route::get('edit-dog/{id}', 'AdminDogController@showEditDog')->name('editDog');
     Route::post('edit-dog/{id}', 'AdminDogController@editDog');
+    Route::get('user-list', 'AdminUserController@showUserTable')->name('userTable');
 });
 
 Route::get('news', function (){
