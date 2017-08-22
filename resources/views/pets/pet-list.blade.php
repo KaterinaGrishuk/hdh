@@ -7,12 +7,12 @@
                     <div class="col-md-12">
                         <h3 style="background-image:none;">Найди своего любимца</h3>
                     </div>
-                    <h4>Фильтр</h4>
-                    <div class="drop-filter">
-                        {{Form::open(['method' => 'get'])}}
-                            {{Form::select('gender', [0 => '--Выберите--', 1 => "Мужской", 2 => "Женский"], null, ['id' => 'js-gender-filter'])}}
-                        {{Form::close()}}
-                    </div>
+                    {{--<h4>Фильтр</h4>--}}
+                    {{--<div class="drop-filter">--}}
+                        {{--{{Form::open(['method' => 'get'])}}--}}
+                            {{--{{Form::select('gender', [0 => '--Выберите--', 1 => "Мужской", 2 => "Женский"], null, ['id' => 'js-gender-filter'])}}--}}
+                        {{--{{Form::close()}}--}}
+                    {{--</div>--}}
                     @foreach($dogs as $dog)
                         <div class="col-md-3">
                             <div class="dog_wrap">
