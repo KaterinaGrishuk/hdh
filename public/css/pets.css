@@ -60,7 +60,7 @@ h3 {
   position: relative;
   display: block;
   margin: 0px 0px 0px;
-  padding: 15px 0px 35px;
+  padding: 5px 0px 15px;
   font-weight: 800;
   font-size: 24px;
   text-align: center;
@@ -85,4 +85,46 @@ h3 {
 }
 .pagination li a:hover{
   color: #888a85;
+}
+.filter_wrap{
+  text-align: left;
+}
+.filter-but-w{
+  text-align: right;
+  margin-bottom: 20px;
+}
+#js-filter-but {
+  margin: 0 65px 0 0;
+  padding: 3px 34px;
+  font-size: 17px;
+  background-color: rgba(135, 195, 160, 0.95);
+  border-radius: 7px;
+  color: #333;
+}
+.drop-filter{
+  display: none;
+  text-align: center;
+  margin-bottom: 30px;
+  padding-left: 155px;
+}
+.show{
+  display: block;
+}
+.drop-filter span{
+  display: inline-block;
+  margin: 0 10px;
+}
+.form-control{
+  width: 240px;
+  display: inline-block;
+  font-size: 17px;
+  height: auto;
+  padding: 4px 10px;
+}
+form{
+  float: left;
+}
+#js-gender-filter,
+#js-age-filter {
+  margin-right: 20px;
 }

@@ -9,12 +9,27 @@ use Illuminate\Http\Request;
 
 class PetsController extends Controller
 {
-    public function petList(){
+    public function petList(Request $request){
 
         $dogs = Dog::with('images');
-
+//        dd($request);
         if($gender = \Request::get('gender')){
-            $dogs=$dogs->where('gender', $gender);
+            if($gender !== 0) {
+                $dogs = $dogs->where('gender', $gender);
+            }
+        }
+        if($age =\Request::get('age')){
+            switch ($age){
+                case 1:
+                    $dogs = $dogs->where('age', '<=', 4);
+                    break;
+                case 2:
+                    $dogs=$dogs->whereBetween('age', [5,9]);
+                    break;
+                case 3:
+                    $dogs=$dogs->where('age', '>=', 10);
+                    break;
+            }
         }
 
         $dogs=$dogs->paginate(12);
