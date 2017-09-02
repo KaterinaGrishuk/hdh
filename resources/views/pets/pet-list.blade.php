@@ -41,7 +41,8 @@
                     @endforeach
                     <div class="row">
                         <div class="col-md-12">
-                            {{ $dogs->render() }}
+                            
+                            {{ $dogs->appends(Request::only(['gender', 'age']))->render() }}
                         </div>
                     </div>
                 </div>
@@ -73,7 +74,13 @@
             $(this).parent().submit();
         });
         $('#js-filter-but').on('click', function (e) {
-            $('.drop-filter').toggleClass('show');
+            var filterBlock = $('.drop-filter');
+            filterBlock.toggleClass('show');
+            localStorage.setItem('filter', filterBlock.is(':visible') ? 1 : 0);
         });
+        
+        if(localStorage.getItem('filter') == 1){
+            $('.drop-filter').toggleClass('show');
+        }
     </script>
 @endsection
