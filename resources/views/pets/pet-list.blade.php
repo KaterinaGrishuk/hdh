@@ -17,7 +17,9 @@
                                 <span>Возраст, лет: </span>{{Form::select('age', [0 => '--Выберите--', 1=>'0-4', 2=>'5-9', 3=>'10-14'], null, ['id'=>'js-age-filter', 'class'=>"form-control"])}}
                                 {{Form::close()}}
                                 {{Form::open(['method' => 'get'])}}
-                                <span id="js-clear-filter">Очистить</span>
+                                <a href="{{ route('pet-list') }}">
+                                    <span id="js-clear-filter">Очистить</span>
+                                </a>
                                 {{Form::hidden('gender', 0)}}
                                 {{Form::hidden('age', 0)}}
                                 {{Form::close()}}
