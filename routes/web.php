@@ -17,6 +17,7 @@ Route::post('become-volunteer', 'VolunteerController@getData');
 Route::get('about', 'AboutController@viewAbout')->name('about');
 
 Route::get('timetable', 'TimetableController@viewTimetable')->name('timetable');
+Route::post('timetable', 'TimetableController@saveTimetable')->name('timetable');
 
 Route::get('contacts', 'ContactsController@viewContacts')->name('contacts');
 Route::post('contacts', 'ContactsController@getData');

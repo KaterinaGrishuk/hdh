@@ -75,12 +75,33 @@ $(document).ready(function() {
         $(this).children('.popup').css({
             "display": "none"
         })
-
     });
-
         $("#phone").mask("+375 (99) 999-99-99");
 
-        VK.Widgets.Group("vk_groups", {mode: 3, width:300, no_cover:1, wide: 1, height: "230"}, 75865542);
-
+    // script for timetable
+    $(".js-write-cell").on('click', function (e) {
+        var el = event.target || event.srcElement;
+        var tagName = el.tagName.toLowerCase();
+        if(tagName == 'input') {return false;}
+        var val = $(this).text();
+        var codeInput = '<input type="text" id="edit" value="'+val+'" />';
+        var codeHidden = '<input type="hidden" name="user_name" class="save-edit" value="+val+" />';
+        $(this).empty().append(codeHidden).append(codeInput);
+        $('#edit').focus();
+        $('#edit').blur(function()	{
+            var text = $(this).val();
+            var codeHidden = '<input type="hidden" name="user_name" class="save-edit" value="'+text+'" />';
+            $(this).parent().empty().append(codeHidden).append(text);
+        });
+        // alert(tagName);
+    });
+    $(window).keydown(function (e) {
+        if(e.keyCode == 13){
+            $('#edit').blur()
+        }
+    });
+    $('#js-save-timetable').on('click', function () {
+        $('#js-timetable').submit();
+    });
 
 });
