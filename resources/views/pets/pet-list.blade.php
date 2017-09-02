@@ -1,5 +1,6 @@
 @extends('layouts.main')
 @section('content')
+
     <section class="dogs">
         <div class="container clearfix">
             <div class="row">
