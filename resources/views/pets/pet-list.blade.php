@@ -37,14 +37,13 @@
                                 @endif
                                 <div class="dog_data">
                                     <div class="dog_name">{{ $dog->name }}</div>
-                                    <div class="dog_age">{{ $dog->age }} {{$controller->makeYears($dog->age)}} </div>
+                                    <div class="dog_age">{{ $dog->age }} {{getStringYear($dog->age)}} </div>
                                 </div>
                             </div>
                         </div>
                     @endforeach
                     <div class="row">
                         <div class="col-md-12">
-                            
                             {{ $dogs->appends(Request::only(['gender', 'age']))->render() }}
                         </div>
                     </div>
